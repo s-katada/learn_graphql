@@ -5,9 +5,9 @@ services:
     stdin_open: true
     container_name: server
     build:
-      context: ./server
+      context: .
       dockerfile: dockerfile
     volumes:
-      - ./server:/server
+      - .:/server
     ports:
       - 4000:4000
