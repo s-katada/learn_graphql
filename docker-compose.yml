@@ -6,7 +6,7 @@ services:
     container_name: server
     build:
       context: ./server
-      dockerfile: dockerfile.server
+      dockerfile: dockerfile
     volumes:
       - ./server:/server
     ports:
