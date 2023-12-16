@@ -1,0 +1,13 @@
+version: '3'
+services:
+  server:
+    tty: true
+    stdin_open: true
+    container_name: server
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - .:/server
+    ports:
+      - 4000:4000

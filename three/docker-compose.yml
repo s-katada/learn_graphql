@@ -1,0 +1,10 @@
+version: '3'
+services:
+  apollo-server:
+    container_name: apollo-server
+    tty: true
+    stdin_open: true
+    build: .
+    working_dir: /server
+    volumes:
+      - .:/server

@@ -1,0 +1,2 @@
+FROM node:14.15.1
+RUN npm install apollo-server@2.19.0 graphql@15.4.0
