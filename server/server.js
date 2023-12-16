@@ -18,19 +18,23 @@ class RandomDie {
   constructor(numSides) {
     this.numSides = numSides;
   }
-p
+
   rollOnce() {
     return 1 + Math.floor(Math.random() * this.numSides);
+  }
+
+  roll({numRolls}) {
+    let output = [];
+    for (var i = 0; i < numRolls; i++) {
+      output.push(this.rollOnce());
+    }
+    return output;
   }
 }
 
 const root = {
-  rollThreeDice: ({numDice, numSides}) =>{
-    let output = [];
-    for (var i = 0; i < numDice; i++) {
-      output.push(1 + Math.floor(Math.random() * (numSides || 6)));
-    }
-    return output;
+  getDie: ({numSides}) => {
+    return new RandomDie(numSides || 6);
   }
 }
 
